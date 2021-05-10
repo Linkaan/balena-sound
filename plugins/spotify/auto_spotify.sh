@@ -24,5 +24,8 @@ done
 sleep 1
 curl -X "PUT" "https://api.spotify.com/v1/me/player" --data "{\"device_ids\":[\"$DEVICE_ID\"]}" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $ACCESS_TOKEN"
 
+sleep 5
+curl -X "PUT" "https://api.spotify.com/v1/me/player/play?device_id=$DEVICE_ID" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $ACCESS_TOKEN"
+
 sleep 1
 curl -X "PUT" "https://api.spotify.com/v1/me/player/play?device_id=$DEVICE_ID" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer $ACCESS_TOKEN"
