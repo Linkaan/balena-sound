@@ -47,4 +47,6 @@ set -- /usr/bin/librespot \
   --volume-ctrl linear \
   "$@"
 
+(/bin/bash /usr/src/auto_spotify.sh) &
+
 exec "$@"
