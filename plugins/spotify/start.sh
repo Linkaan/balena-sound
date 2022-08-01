@@ -39,6 +39,8 @@ echo "Device name: $SOUND_DEVICE_NAME"
 [[ -z "$SOUND_SPOTIFY_DISABLE_NORMALISATION" ]] && echo "Volume normalization enabled."
 [[ -z "$SOUND_SPOTIFY_ENABLE_CACHE" ]] && echo "Spotify audio cache disabled."
 
+echo "104.154.127.126 ap-gew4.spotify.com" >> /etc/hosts
+
 set -- /usr/bin/librespot \
   --backend pulseaudio \
   --name "$SOUND_DEVICE_NAME" \
